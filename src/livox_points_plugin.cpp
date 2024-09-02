@@ -341,8 +341,8 @@ void LivoxPointsPlugin::SendRosTf(const ignition::math::Pose3d &pose, const std:
     auto pos = pose.Pos();
     tf.setRotation(tf::Quaternion(rot.X(), rot.Y(), rot.Z(), rot.W()));
     tf.setOrigin(tf::Vector3(pos.X(), pos.Y(), pos.Z()));
-    tfBroadcaster->sendTransform(
-        tf::StampedTransform(tf, ros::Time::now(), raySensor->ParentName(), raySensor->Name()));
+    //tfBroadcaster->sendTransform(
+    //    tf::StampedTransform(tf, ros::Time::now(), raySensor->ParentName(), raySensor->Name()));
 }
 
 }
